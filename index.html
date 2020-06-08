@@ -1,39 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hello world!</title>    
     <link href="./css/reset.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <p>Lorem ipsum</p>
-    <span>Lorem ipsum</span>
-    <div>
-        <img src="" />
-        <span>Lorem ipsum</span>
-    </div>
-    <h1></h1>
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <h5></h5>
-    <h6></h6>
-    <section></section>
-    <video>
-        <source src="./assets/video.mp4" />
-    </video>
 
-    <!-- menu -->
-    <nav>
-        <ul>
-            <li>Pozycja 1</li>
-            <li>Pozycja 2</li>
-            <li>Pozycja 3</li>
-            <li>Pozycja 4</li>
-        </ul>
-    </nav>
+<body>
+
+    <header class="container primary-navigation">
+        <h1>Demo blog!</h1>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="./">                        
+                        <span>About me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./link2.html">                        
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./link3.html">                        
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./link4.html">                        
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="column">
+            <h2>Cześć, to jest strona internetowa</h2>
+            <p>Zrobiona na potrzeby zaliczenia ćwiczeń z wprowadzenia do technologii webowych. I jest najlepsza. Dlaczego?</p>
+
+            <h3>Jest lekka</h3>
+
+            <h3>Jest responsywna</h3>
+            
+            <h3>I działa</h3>
+
+
+            <p>Chce tylko powiedzieć, że wszystkie problemy, które mamy ze stronami internetowymi, to te, które sami tworzymy.</p>
+
+        </div>
+    </section>
+
+    <footer>
+        <nav class="navigation">
+            <ul>
+                <li><a href="./">About me</a></li>
+                <li><a href="./link2.html">Menu 2</a></li>
+                <li><a href="./link3.html">Menu 3</a></li>
+                <li><a href="./link4.html">Menu 4</a></li>
+            </ul>
+        </nav>
+        <div>
+            <span>Copyright</span>
+        </div>
+    </footer>
+
     <script src="./scripts/app.js"></script>
 </body>
+
 </html>
