@@ -32,6 +32,7 @@ p{
 .column{
     flex:1;
 }
+/****/
 .primary-navigation{
     display: flex;
     align-items: baseline;
@@ -46,4 +47,13 @@ p{
 }
 .navigation ul > li{
     margin: 0 10px;  
+}
+/****/
+.post img, .post video{
+    width: 100%;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
 }
