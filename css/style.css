@@ -6,6 +6,8 @@ body{
     font-family: 'IBM Plex Mono', monospace;
     background-color: #14213D;
     color: #FFFFFF;
+    opacity: 0;
+    animation: fade 1s ease-in forwards 0.3s;
 }
 h1{
     font-size: 33px;
@@ -112,22 +114,59 @@ header h1{
 .post-meta span{
     font-size: 13px;
     line-height: 24px;
+    margin-right: 10px;
 }
 .post-meta span img{
-    margin-right: 5px;
+    margin-right: 8px;
     width: 10px;
     height: 10px;
 }
 .post-image img, .post-image video{
     width: 100%;
-    margin-bottom: 48px; /*wysokość jednej linijki 16px tekstu*/
+    margin-bottom: 24px; /*wysokość jednej linijki 16px tekstu*/
 }
 /*Pagination*/
 
-.pagination__buttons{
+.pagination__title {
+    display: flex;
     text-align: center;
+    position: relative;
+    margin: 100px 0 20px;
 }
 
+.pagination__title-h {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    background: #14213D;
+    margin: 0 auto;
+    padding: 5px 10px;
+    z-index: 1;
+}
+
+.pagination__title hr {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 17px;
+    z-index: 0;
+}
+
+.pagination__buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.pagination__buttons a:hover{
+    text-decoration: none;
+}
+
+.pagination__buttons .button__icon img{
+    width: 10px;
+    height: 10px;
+}
 
 /* Footer */
 .footer__inner{
@@ -167,6 +206,18 @@ header h1{
     100% {
       box-shadow: -1px -1px #e5e5e5, -2px -2px #e5e5e5, -3px -3px #e5e5e5, -4px -4px #e5e5e5, -5px -5px #e5e5e5, -6px -6px #e5e5e5, -7px -7px #e5e5e5, -8px -8px #e5e5e5;
       transform: translateX(8px) translateY(8px);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: scale(0.994);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
     }
   }
   
