@@ -1,148 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Hello world!</title>
+		<link href="./css/reset.css" rel="stylesheet">
+		<link href="./css/style.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Demo blog!</h1>
+				<nav class="header__menu">
+					<ul class="header__menu__inner header__menu__inner--desktop">
+						<li>
+							<a href="./about-me.html">About me</a>
+						</li>
+						<li>
+							<a href="./portfolio.html">Portfolio</a>
+						</li>
+						<li>
+							<a href="./blog.html">Blog</a>
+						</li>
+						<li>
+							<a href="./contact.html">Contact</a>
+						</li>
+					</ul>
+					
+					<ul class="header__menu__inner header__menu__inner--mobile">
+						<li>
+							<a href="./about-me.html">About me</a>
+						</li>
+						<li>
+							<a href="./portfolio.html">Portfolio</a>
+						</li>
+						<li>
+							<a href="./blog.html">Blog</a>
+						</li>
+						<li>
+							<a href="./contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello world!</title>    
-    <link href="./css/reset.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+			<section>
+				<article class="post">
+					<h2 class="post-title">A to jest pierwszy wpis na tej stronie!</h2>
+					<div class="post-meta">
+						<span class="post-date"><img src="./assets/svg/timer.svg" alt="Post date"/>2020-06-09</span>
+						<span class="post-tags"><img src="./assets/svg/tag.svg" alt="Post tags"/>#helloworld</span>
+					</div>
+					<div class="post-image">
+						<video controls><source src="./assets/video.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="post-content">
+						<p>Duis maximus eleifend dui id molestie. Fusce scelerisque ultricies metus sit amet finibus. Morbi et risus mollis, suscipit elit eu, eleifend nisl. Cras id diam nec enim efficitur tempor. Curabitur diam eros, ullamcorper ac mi sit amet, elementum pulvinar odio. Nam ante elit, pellentesque id bibendum quis, cursus et ipsum. Fusce euismod erat tellus, ut blandit mi aliquam vel. Morbi iaculis ligula tincidunt, mollis lorem vitae, faucibus libero. Cras fringilla mattis viverra.</p>
+											
+						<p>Fusce in elementum lorem. Ut interdum finibus arcu, in feugiat mi. Nulla dolor metus, vulputate at erat a, venenatis dictum ligula. Nulla viverra ut lorem et fringilla. Phasellus sed erat sit amet dolor luctus pharetra. Vivamus lacinia ante est. Cras non ligula vel orci laoreet ultrices. Curabitur sollicitudin eros dapibus, efficitur lectus non, auctor quam. Praesent aliquam lectus ut rhoncus dignissim. Ut tempus ullamcorper tincidunt. Integer ultrices neque quis dictum aliquam. Nunc semper molestie dictum. Nullam libero est, porta vitae lorem in, bibendum venenatis mi. Sed rutrum turpis non ex posuere, fringilla placerat justo volutpat.</p>
+					</div>					
+				</article>
+				
+				<div class="pagination">
+					<div class="pagination__title">
+					  <span class="pagination__title-h">Przeczytaj inne posty</span>
+					  <hr>
+					</div>
+					<div class="pagination__buttons">
+					  
+					  <span class="button previous">
+						<a href="#">
+						  <span class="button__icon"><img src="./assets/svg/arrow-left.svg" alt="Previous posts"/></span>
+						  <span class="button__text"></span>
+						</a>
+					  </span>
 
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>Demo blog!</h1>
-            <nav class="menu">
-                <ul class="menu__inner menu__inner--desktop">
-                    <li>
-                        <a href="./about-me.html">                        
-                            <span>About me</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./portfolio.html">                        
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./blog.html">                        
-                            <span>Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">                        
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-                
-                <ul class="menu__inner menu__inner--mobile">
-                    <li>
-                        <a href="./about-me.html">                        
-                            <span>About me</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./portfolio.html">                        
-                            <span>Portfolio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./blog.html">                        
-                            <span>Blog</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">                        
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-                
+					  <span class="button next">
+						<a href="#">
+						  <span class="button__icon"><img src="./assets/svg/arrow-right.svg" alt="Next posts"/></span>
+						  <span class="button__text"></span>
+						</a>
+					  </span> 
+					  
+					  
+					</div>
+				</div>
+            </section>
+			
+			<footer>
+				<div class="footer__inner">
+					<nav class="footer__menu">
+						<ul class="footer__menu__inner">
+							<li>
+								<a href="./about-me.html">About me</a>
+							</li>
+							<li>
+								<a href="./portfolio.html">Portfolio</a>
+							</li>
+							<li>
+								<a href="./blog.html">Blog</a>
+							</li>
+							<li>
+								<a href="./contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					
+					<div class="footer__copyright">
+						<span>&copy; by twardosz</span>
+					</div> 
+				</div>
+			</footer>
+		</div>
+		<script src="./scripts/script.js"></script>
 
-            </nav>
-        </header>
-
-
-        <section class="container"> 
-            <div class="column">
-                <div class="post">
-                    <h2 class="post-title">A to jest pierwszy wpis na tej stronie!</h2>
-                    <span class="post-date">8 czerwca 2020</span>
-                    <video controls>
-                        <source src="./assets/video.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                      </video>
-                    <p>Duis maximus eleifend dui id molestie. Fusce scelerisque ultricies metus sit amet finibus. Morbi et risus mollis, suscipit elit eu, eleifend nisl. Cras id diam nec enim efficitur tempor. Curabitur diam eros, ullamcorper ac mi sit amet, elementum pulvinar odio. Nam ante elit, pellentesque id bibendum quis, cursus et ipsum. Fusce euismod erat tellus, ut blandit mi aliquam vel. Morbi iaculis ligula tincidunt, mollis lorem vitae, faucibus libero. Cras fringilla mattis viverra.</p>
-    
-                    <p>Fusce in elementum lorem. Ut interdum finibus arcu, in feugiat mi. Nulla dolor metus, vulputate at erat a, venenatis dictum ligula. Nulla viverra ut lorem et fringilla. Phasellus sed erat sit amet dolor luctus pharetra. Vivamus lacinia ante est. Cras non ligula vel orci laoreet ultrices. Curabitur sollicitudin eros dapibus, efficitur lectus non, auctor quam. Praesent aliquam lectus ut rhoncus dignissim. Ut tempus ullamcorper tincidunt. Integer ultrices neque quis dictum aliquam. Nunc semper molestie dictum. Nullam libero est, porta vitae lorem in, bibendum venenatis mi. Sed rutrum turpis non ex posuere, fringilla placerat justo volutpat.</p>
-                </div>
-    
-                <div class="post">
-                    <h2 class="post-title">Doom</h2>
-                    <span class="post-date">9 czerwca 2020</span>
-                    <img src="./assets/doom.jpg" alt="Doom game">
-    
-                    <p><strong><em>Doom</em></strong> (stylized as <strong><em>DOOM</em></strong> or <strong><em>DooM</em></strong> in other media) is a 1993 <a href="https://en.m.wikipedia.org/wiki/First-person_shooter">first-person shooter</a> developed and published by <a href="https://en.m.wikipedia.org/wiki/Id_Software">id Software</a> for <a href="https://en.m.wikipedia.org/wiki/MS-DOS">MS-DOS</a>. Players assume the role of a <a href="https://en.m.wikipedia.org/wiki/Space_marine">space marine</a>, popularly known as "<a href="https://en.m.wikipedia.org/wiki/Doomguy">Doomguy</a>", fighting his way through hordes of invading <a href="https://en.m.wikipedia.org/wiki/Demon">demons</a> from <a href="https://en.m.wikipedia.org/wiki/Hell">Hell</a>. The first episode, comprising nine levels, was distributed freely as <a href="https://en.m.wikipedia.org/wiki/Shareware">shareware</a> and played by an estimated 15–20 million people within two years; the full game, with two further episodes, was sold via <a href="https://en.m.wikipedia.org/wiki/Mail_order">mail order</a>. An updated version with an additional episode, <em>Ultimate Doom</em>, was released in 1995 and sold at retail.</p>
-    
-                    <p>Along with its predecessor <em><a href="https://en.m.wikipedia.org/wiki/Wolfenstein_3D">Wolfenstein 3D</a></em>, <em>Doom</em> helped define the FPS genre and inspired numerous similar games, known as "<a href="https://en.m.wikipedia.org/wiki/Doom_clone"><em>Doom</em> clones</a>". It is one of the most significant games in <a href="https://en.m.wikipedia.org/wiki/Video_game_history">video game history</a>, and is frequently cited as one of the <a href="https://en.m.wikipedia.org/wiki/Greatest_video_games_of_all_time">greatest games of all time</a>. It pioneered <a href="https://en.m.wikipedia.org/wiki/Online_distribution">online distribution</a> and technologies including <a href="https://en.m.wikipedia.org/wiki/3D_computer_graphics">3D graphics</a>, networked <a href="https://en.m.wikipedia.org/wiki/Multiplayer_video_game">multiplayer gaming</a>, and support for customized <a href="https://en.m.wikipedia.org/wiki/Modification_(video_game)">modifications</a> via packaged files (<a href="https://en.m.wikipedia.org/wiki/Doom_WAD">WADs</a>). Its graphic violence and hellish imagery also made it the <a href="https://en.m.wikipedia.org/wiki/Video_game_controversy">subject of controversy</a>, however. </p>
-    
-                    <p><em>Doom</em> has been <a href="https://en.m.wikipedia.org/wiki/Official_versions_of_Doom">ported to numerous platforms</a>. The <a href="https://en.m.wikipedia.org/wiki/Doom_(franchise)"><em>Doom</em> franchise</a> continued with <em><a href="https://en.m.wikipedia.org/wiki/Doom_II:_Hell_on_Earth">Doom II: Hell on Earth</a></em> (1994) and <a href="https://en.m.wikipedia.org/wiki/Expansion_pack">expansion packs</a> including <em><a href="https://en.m.wikipedia.org/wiki/Master_Levels_for_Doom_II">Master Levels for Doom II</a></em> (1995). The <a href="https://en.m.wikipedia.org/wiki/Source_code">source code</a> was released in 1997, inspiring further adaptations. Id returned to the franchise with <em><a href="https://en.m.wikipedia.org/wiki/Doom_3">Doom 3</a></em> (2004), a horror-focused retelling using the <a href="https://en.m.wikipedia.org/wiki/Id_Tech_4">id Tech 4</a> engine, followed by a 2005 <a href="https://en.m.wikipedia.org/wiki/Doom_(film)"><em>Doom</em> film</a>. A 2016 reboot also titled <em><a href="https://en.m.wikipedia.org/wiki/Doom_(2016_video_game)">Doom</a>,</em> powered by <a href="https://en.m.wikipedia.org/wiki/Id_Tech_6">id Tech 6</a>, returned to the fast-paced action of the first games. </p>
-                
-                    <blockquote><p>Source: <a href="https://en.m.wikipedia.org/wiki/Doom_(1993_video_game">https://en.m.wikipedia.org/wiki/Doom_(1993_video_game</a>) </p></blockquote>
-    
-                    <p><a href="https://the-butler.cecil.app/tags/video-games/">#Video games</a>&nbsp; <a href="https://the-butler.cecil.app/tags/fps/">#FPS</a>&nbsp; </p>
-                
-                </div>
-    
-                <div class="post">
-                    <h2 class="post-title">Half-Life</h2>
-                    <span class="post-date">9 czerwca 2020</span>
-                    <img src="./assets/half-life.jpg" alt="Half-Life game">
-    
-                    <p><i><b>Half-Life</b></i> is a <a href="/wiki/First-person_shooter" title="First-person shooter">first-person shooter</a> game developed by <a href="/wiki/Valve_Corporation" title="Valve Corporation">Valve</a> and published by <a href="/wiki/Sierra_Entertainment" title="Sierra Entertainment">Sierra Studios</a> for <a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a> in 1998. It was Valve's debut product and the first game in the <a href="/wiki/Half-Life_(series)" title="Half-Life (series)"><i>Half-Life</i> series</a>. Players assume the role of <a href="/wiki/Gordon_Freeman" title="Gordon Freeman">Gordon Freeman</a>, a scientist who must find his way out of the Black Mesa Research Facility after it is invaded by aliens. The core <a href="/wiki/Gameplay" title="Gameplay">gameplay</a> consists of fighting alien and human enemies with a variety of weapons and solving puzzles. 
-                    </p>
-    
-                    <p>Unlike many other games at the time, the player has almost uninterrupted control of Freeman, and the story is told mostly through <a href="/wiki/Scripted_sequence" title="Scripted sequence">scripted sequences</a> seen through his eyes. Valve co-founder <a href="/wiki/Gabe_Newell" title="Gabe Newell">Gabe Newell</a> said the team aimed to create an immersive world rather than a "shooting gallery". They built <i>Half-Life</i> using <a href="/wiki/GoldSrc" title="GoldSrc">GoldSrc</a>, a heavily modified version of the <a href="/wiki/Quake_engine" title="Quake engine"><i>Quake</i> engine</a>, licensed from <a href="/wiki/Id_Software" title="Id Software">id Software</a>.
-                    </p>
-    
-                    <p><i>Half-Life</i> received acclaim for its graphics, realistic gameplay, and seamless narrative. It won over fifty <a href="/wiki/PC_game" title="PC game">PC</a> "<a href="/wiki/Game_of_the_Year" class="mw-redirect" title="Game of the Year">Game of the Year</a>" awards and is considered one of the most influential games of the first-person shooter genre, as well as one of the <a href="/wiki/List_of_video_games_considered_the_best" title="List of video games considered the best">best video games ever made</a>. By 2008, the game had sold over 9 million copies. It was followed by the <a href="/wiki/Expansion_pack" title="Expansion pack">expansion packs</a> <i><a href="/wiki/Half-Life:_Opposing_Force" title="Half-Life: Opposing Force">Opposing Force</a></i> (1999) and <i><a href="/wiki/Half-Life:_Blue_Shift" title="Half-Life: Blue Shift">Blue Shift</a></i> (2001), developed by <a href="/wiki/Gearbox_Software" title="Gearbox Software">Gearbox Software</a>. It was ported to the <a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a> in 2001, along with another expansion <i><a href="/wiki/Half-Life:_Decay" title="Half-Life: Decay">Half-Life: Decay</a></i>, and to <a href="/wiki/MacOS" title="MacOS">macOS</a> and <a href="/wiki/Linux_kernel" title="Linux kernel">Linux</a> in 2013. Valve ported <i>Half-Life</i> to its <a href="/wiki/Source_(game_engine)" title="Source (game engine)">Source</a> engine in 2004, while a third-party remake, <i><a href="/wiki/Black_Mesa_(video_game)" title="Black Mesa (video game)">Black Mesa</a></i>, was released in 2020.
-                    </p>
-    
-                    <p><i>Half-Life</i> sparked numerous fan-made <a href="/wiki/Mod_(video_gaming)" class="mw-redirect" title="Mod (video gaming)">mods</a>, several of them becoming standalone games, notably <i><a href="/wiki/Counter-Strike" title="Counter-Strike">Counter-Strike</a></i>, <i><a href="/wiki/Day_of_Defeat" title="Day of Defeat">Day of Defeat</a></i> and <i><a href="/wiki/Sven_Co-op" title="Sven Co-op">Sven Co-op</a></i>. A sequel, <i><a href="/wiki/Half-Life_2" title="Half-Life 2">Half-Life 2</a></i>, was released in 2004, followed by <i><a href="/wiki/Half-Life_2:_Episode_One" title="Half-Life 2: Episode One">Half-Life 2: Episode One</a> (2006), <a href="/wiki/Half-Life_2:_Episode_Two" title="Half-Life 2: Episode Two">Episode Two</a> (2007)</i>, and <i><a href="/wiki/Half-Life:_Alyx" title="Half-Life: Alyx">Half-Life: Alyx</a></i> (2020).
-                    </p>                
-                
-                    <blockquote><p>Source: <a href="https://en.wikipedia.org/wiki/Half-Life_(video_game)">https://en.wikipedia.org/wiki/Half-Life_(video_game)</a>) </p></blockquote>
-    
-                    <p><a href="https://the-butler.cecil.app/tags/video-games/">#Video games</a>&nbsp; <a href="https://the-butler.cecil.app/tags/fps/">#FPS</a>&nbsp; </p>
-                
-                </div>
-    
-            </div>
-        </section>
-    
-        <footer class="container footer">
-            <div class="footer__inner">
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="./">About me</a></li>
-                        <li><a href="./link2.html">Menu 2</a></li>
-                        <li><a href="./link3.html">Menu 3</a></li>
-                        <li><a href="./link4.html">Menu 4</a></li>
-                    </ul>
-                </nav>
-                <div class="copyright copyright--user">
-                    <span>copyright by twardosz</span>
-                </div>
-            </div>
-        </footer>
-
-
-    </div>
-
-    <script src="./scripts/script.js"></script>
-</body>
-
+	</body>
 </html>
