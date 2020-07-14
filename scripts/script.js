@@ -1,11 +1,16 @@
 let toDoItems = [];
 
 function renderToDo(toDo) {
+    localStorage.setItem('todoItemsRef', JSON.stringify(todoItems));
+
+
     const list = document.querySelector('.js-todo-list');
     const item = document.querySelector(`[data-key='${toDo.id}']`);
 
     if (toDo.deleted) {
         item.remove();
+
+        if (todoItems.length === 0) list.innerHTML = '';
         return
     }
 
