@@ -1,7 +1,7 @@
 let toDoItems = [];
 
 function renderToDo(toDo) {
-    localStorage.setItem('todoItemsRef', JSON.stringify(todoItems));
+    localStorage.setItem('todoItemsRef', JSON.stringify(toDoItems));
 
 
     const list = document.querySelector('.js-todo-list');
@@ -10,7 +10,7 @@ function renderToDo(toDo) {
     if (toDo.deleted) {
         item.remove();
 
-        if (todoItems.length === 0) list.innerHTML = '';
+        if (toDoItems.length === 0) list.innerHTML = '';
         return
     }
 
@@ -91,4 +91,14 @@ list.addEventListener('click', event => {
         deleteToDo(itemKey);
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ref = localStorage.getItem('todoItems');
+    if (ref) {
+      todoItems = JSON.parse(ref);
+      todoItems.forEach(t => {
+        renderTodo(t);
+      });
+    }
+  });
 

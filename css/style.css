@@ -223,50 +223,77 @@ header h1{
 
 
 
-  .empty-state {
+.empty-state {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     display: none;
-  }
-
-  .empty-state img{
-    width: 30px;
-    height: 30px;
-  
-  } 
-
-
-  .todo-list:empty {
+}
+.empty-state img{
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+.todo-list:empty {
     display: none;
-  }
-  
-  .todo-list:empty + .empty-state {
+}  
+.todo-list:empty + .empty-state {
     display: flex;
-  }
-   
-  .checklist-icon {
+}
+.checklist-icon {
     margin-bottom: 20px;
-  }
-  
-  .empty-state__title, .empty-state__description {
+}
+.empty-state__title, .empty-state__description {
     margin-bottom: 20px;
-  }
+}
+.js-form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.js-todo-input {
+	color: #FFFFFF;
+	background: #14213D;	
+	border: 3px solid #FFFFFF;	
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 400;
+	font-style: normal;
+    font-family: 'IBM Plex Mono', monospace;  
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
 
-
-
-  
- 
-  /*temp*/
-  .js-tick {
-    width: 30px;
-    height: 30px;
-    border: 3px solid #333;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+}
+.js-delete-todo{
+    border: none;
+    background-color: transparent;
+    outline: none;
     cursor: pointer;
 }
-  
-  
+.js-delete-todo img{
+    width: 30px;
+    height: 30px;
+}
+.todo-item input[type="checkbox"] {
+	display: none;
+}
+.done .tick::before {
+	display: inline;
+}
+.tick::before {
+	content: '✓';
+	font-size: 20px;
+	display: none;
+}
+.tick {
+	width: 30px;
+	height: 30px;
+	border: 3px solid #333;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+ 
