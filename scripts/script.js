@@ -2,6 +2,12 @@ let toDoItems = [];
 
 function renderToDo(toDo) {
     const list = document.querySelector('.js-todo-list');
+    const item = document.querySelector(`[data-key='${toDo.id}']`);
+
+    if (toDo.deleted) {
+        item.remove();
+        return
+    }
 
     const isChecked = toDo.checked ? 'done' : '';
     const node = document.createElement("li");
@@ -16,7 +22,11 @@ function renderToDo(toDo) {
         </button>
     `;
 
-    list.append(node);
+    if (item) {
+        list.replaceChild(node,item);
+    } else {
+        list.append(node);   
+    }
 }
 
 function addToDo(text) {
@@ -28,6 +38,25 @@ function addToDo(text) {
 
     toDoItems.push(toDo);
     renderToDo(toDo);
+}
+
+function toggleDone(key) {
+    const index = toDoItems.findIndex(item => item.id === Number(key));
+    toDoItems[index].checked = !toDoItems[index].checked;
+    renderToDo(toDoItems[index]);
+}
+
+function deleteToDo(key) {
+    const index = toDoItems.findIndex(item => item.id === Number(key));
+
+    const toDo = {
+        deleted: true,
+        ...toDoItems[index]
+    };
+
+    toDoItems = toDoItems.filter(item => item.id !== Number(key));
+
+    renderToDo(toDo);   
 }
 
 const form = document.querySelector('.js-form');
@@ -43,5 +72,18 @@ form.addEventListener('submit', event => {
     }
 });
 
-//next to do Mark a task as completed
+const list = document.querySelector('.js-todo-list');
+list.addEventListener('click', event => {
+        
+    if (event.target.classList.contains('js-tick')) {
+        const itemKey = event.target.parentElement.dataset.key;
+        toggleDone(itemKey);
+    } 
+
+    if (event.target.classList.contains('js-delete-todo')) {
+        
+        const itemKey = event.target.parentElement.dataset.key;
+        deleteToDo(itemKey);
+    }
+});
 

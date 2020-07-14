@@ -220,5 +220,19 @@ header h1{
       transform: scale(1);
     }
   }
+
+
+
+  /*temp*/
+  .js-tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
   
   
