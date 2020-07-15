@@ -187,9 +187,6 @@ header h1{
 	justify-content: space-between;
 }
 .empty-state {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     display: none;
 }
 .empty-state img{
@@ -208,6 +205,7 @@ header h1{
 }
 .empty-state__title, .empty-state__description {
     margin-bottom: 20px;
+    padding: 0;
 }
 .js-form{
     display: flex;
@@ -254,7 +252,52 @@ header h1{
 	align-items: center;
 	cursor: pointer;
 }
-
+.text-inner{
+    display: flex;
+}
+.centered-text{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form input[type="text"], .contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #E5E5E5;
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: none;
+	margin: 10px 0;
+	background-color: #14213D;
+	color: #FFFFFF;
+	font-size: 13px;
+	line-height: 24px;
+	font-family: 'IBM Plex Mono', monospace;
+}
+.contact-form label{
+    font-size: 13px; 
+    line-height: 24px;
+}
+.contact-form input[type="submit"]{    
+	font-family: 'IBM Plex Mono', monospace;
+    background-color: #FCA311;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 24px;
+    color:#fff;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.contact-form input[type="submit"]:hover{
+    opacity: 0.75;
+}
 
 
 
