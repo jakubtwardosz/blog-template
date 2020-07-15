@@ -21,6 +21,10 @@ h3{
     font-size: 20px;
     line-height: 35px;
 }
+h4{
+    font-size: 16px;
+    line-height: 29px;
+}
 p{
     padding: 0 0 20px;
     margin: 0;
@@ -305,8 +309,52 @@ header h1{
     opacity: 0.75;
     color: #14213D;
 }
+.about-me-intro{
+    text-align: center;
+    padding: 53px;
+}
+.about-me .text-container h3,
+.about-me .text-container h4{
+    margin-bottom: 10px;
+}
 
+.about-me .text-container ul {
+	list-style-type: square;
+	list-style-position: inside;
+}
 
+.about-me-intro span{
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.about-me .flex-item{
+    padding-bottom: 53px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-container p{
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.about-me-end{
+    display: flex;
+}
+
+.about-me-end > *{
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+.about-me-end img{
+    margin-right: 30px;
+}
 
 /* Keyframes */
  @-webkit-keyframes fill {
@@ -346,3 +394,5 @@ header h1{
       transform: scale(1);
     }
   }
+
+
