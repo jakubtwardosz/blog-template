@@ -14,17 +14,16 @@ function renderToDo(toDo) {
         return
     }
 
-    const isChecked = toDo.checked ? 'done' : '';
+    const isChecked = toDo.checked ? 'done': '';
     const node = document.createElement("li");
-    node.setAttribute('class', 'todo-item ${isChecked}');
+    node.setAttribute('class', `todo-item ${isChecked}`); 
     node.setAttribute('data-key', toDo.id);
     node.innerHTML = `
         <input id="${toDo.id}" type="checkbox"/>
-        <label for="${toDo.id}" class="tick js-tick"></label>
-        <span>${toDo.text}</span>
-        <button class="delete-todo js-delete-todo" href="#delete-icon">
-        <img src="./assets/svg/circle-x.svg" alt="Delete"/>        
-        </button>
+        <label for="${toDo.id}" class="tick js-tick">       
+        </label>
+        <span class="todo-text">${toDo.text}</span>
+        <span class="delete-todo js-delete-todo">x</span>
     `;
 
     if (item) {
@@ -85,11 +84,17 @@ list.addEventListener('click', event => {
         toggleDone(itemKey);
     } 
 
+    
+    
+
     if (event.target.classList.contains('js-delete-todo')) {
         
         const itemKey = event.target.parentElement.dataset.key;
         deleteToDo(itemKey);
     }
+
+
+
 });
 
 document.addEventListener('DOMContentLoaded', () => {
