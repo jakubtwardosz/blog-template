@@ -255,12 +255,18 @@ header h1{
 .text-inner{
     display: flex;
 }
+
+.text-inner h2{
+    margin: 10px;
+}
 .centered-text{
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.contact-form input[type="text"], .contact-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
 	width: 100%;
 	padding: 10px;
 	border: 2px solid #E5E5E5;
@@ -297,6 +303,7 @@ header h1{
 }
 .contact-form input[type="submit"]:hover{
     opacity: 0.75;
+    color: #14213D;
 }
 
 
