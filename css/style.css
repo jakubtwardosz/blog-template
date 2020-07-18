@@ -53,6 +53,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: baseline; 
+    position: relative;
 }
 section{
     padding: 53px 0;
@@ -103,6 +104,30 @@ header h1{
 }
 .header__menu__inner--mobile{
     display: none;
+    position: absolute;
+    top: 70px;
+    flex-direction: column;
+    right: 0px;
+    border: 1px solid #fff;
+    padding: 15px;
+    background-color: #14213d;
+}
+
+
+.header__menu__inner--mobile li {
+        margin: 10px 0;
+    }
+
+.nav-toggle{
+    display: none;
+}
+.show--menu{
+    display: flex;
+}
+.nav-toggle img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
 }
 /* Single post styles */
 .post-title{
@@ -309,53 +334,65 @@ header h1{
     opacity: 0.75;
     color: #14213D;
 }
-.about-me-intro{
+
+.about_me--intro{
     text-align: center;
-    padding: 53px;
-}
-.about-me .text-container h3,
-.about-me .text-container h4{
-    margin-bottom: 10px;
+    padding: 50px;
 }
 
-.about-me .text-container ul {
-	list-style-type: square;
-	list-style-position: inside;
-}
-
-.about-me-intro span{
+.about_me--intro span{
     font-size: 13px;
     line-height: 24px;
 }
 
-.about-me .flex-item{
-    padding-bottom: 53px;
+.about_me--list{
+    list-style-type: square;
+	list-style-position: inside;
 }
 
-.flex-container{
+.about_me--heading{
+    margin-bottom: 10px;
+}
+
+.about_me--ending{
+    margin-top: 50px;
+}
+
+.row{
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.text-container p{
-    padding: 0;
-    margin: 0 0 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
-.about-me-end{
-    display: flex;
-}
-
-.about-me-end > *{
+.col{
     flex-grow: 1;
     flex-basis: 0;
     max-width: 100%;
-}
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
-.about-me-end img{
-    margin-right: 30px;
+  
+@media screen and (max-width: 768px) {
+    .header__menu__inner--desktop{
+        display: none;
+    }
+    .header__menu__inner--mobile{
+        /* display: flex; */
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .footer__inner {  
+        flex-direction: column;
+    }
+    .row{
+        flex-direction: column;
+    }
 }
-
 /* Keyframes */
  @-webkit-keyframes fill {
     0% {
@@ -394,5 +431,7 @@ header h1{
       transform: scale(1);
     }
   }
+
+
 
 

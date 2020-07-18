@@ -1,3 +1,13 @@
+
+
+ function toggleMenu() {
+    var x = document.getElementById("mobile-menu");
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  } 
 let toDoItems = [];
 
 function renderToDo(toDo) {

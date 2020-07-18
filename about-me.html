@@ -12,10 +12,11 @@
 		<div class="container">
 			<header>
 				<h1>Demo blog!</h1>
+				
 				<nav class="header__menu">
 					<ul class="header__menu__inner header__menu__inner--desktop">
 						<li>
-							<a href="./about-me.html">About me</a>
+							<a href="./about-me.html">About me</a> 
 						</li>
 						<li>
 							<a href="./portfolio.html">Portfolio</a>
@@ -28,7 +29,7 @@
 						</li>
 					</ul>
 					
-					<ul class="header__menu__inner header__menu__inner--mobile">
+					<ul id="mobile-menu" class="header__menu__inner header__menu__inner--mobile">
 						<li>
 							<a href="./about-me.html">About me</a>
 						</li>
@@ -42,24 +43,27 @@
 							<a href="./contact.html">Contact</a>
 						</li>
 					</ul>
+					<div class="nav-toggle" onclick="toggleMenu()">
+						<img src="./assets/svg/menu.svg" alt="Toggle menu"/>
+					</div>
 				</nav>
 			</header>
 
-			<section>
-				<div class="flex-container about-me"> 	 					
-					<div class="flex-item about-me-intro"> 
+			<section class="about_me">
+				<div class="row"> 	 					
+					<div class="col about_me--intro"> 
 						<span>Hello :)</span>
-						<h2>Lorem ipsum dolor sit amet</h2>
+						<h2 class="about_me--heading">Lorem ipsum dolor sit amet</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
 					</div>
+				</div>
 
-
-					<div class="flex-item about-me-main">
-						<div class="text-container">
-							<h3>This is first section with list</h3>
+					<div class="row">
+						<div class="col">
+							<h3 class="about_me--heading">This is first section with list</h3>
 							<p>Berspiciatis unde omnis iste natus <strong>error</strong> sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-							<h4>Something</h4>
-							<ul>
+							<h4 class="about_me--heading">Something</h4>
+							<ul class="about_me--list">
 								<li>Nam id egestas leo</li>
 								<li>Vivamus ut mi at nisi tincidunt tempor</li>
 								<li>Cras blandit felis eget elit varius, ac dapibus justo blandit</li>
@@ -67,17 +71,19 @@
 								<li>Donec et dolor eu risus finibus consectetur placerat et dui</li>
 							</ul>
 						</div>
-					</div>
+					</div> 
 					
-					<div class="flex-item about-me-end">					
-						<img src="./assets/halflife-gameplay.jpg" alt="Half-Life gameplay">
-						<div class="text-container">
-							<h3>This is first section with image</h3>
-							<p>Berspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-							<a href="#" title="Check it out">Check it out</a>
+					<div class="row about_me--ending">
+						<div class="col">
+							<img src="./assets/halflife-gameplay.jpg" alt="Half-Life gameplay">
+						</div>
+						<div class="col">
+								<h3 class="about_me--heading">This is first section with image</h3>
+								<p>Berspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+								<a href="#" title="Check it out">Check it out</a>
 						</div>
 					</div>					
-				</div>
+				
 			</section>
 			
 			

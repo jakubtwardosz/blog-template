@@ -12,10 +12,11 @@
 		<div class="container">
 			<header>
 				<h1>Demo blog!</h1>
+				
 				<nav class="header__menu">
 					<ul class="header__menu__inner header__menu__inner--desktop">
 						<li>
-							<a href="./about-me.html">About me</a>
+							<a href="./about-me.html">About me</a> 
 						</li>
 						<li>
 							<a href="./portfolio.html">Portfolio</a>
@@ -28,7 +29,7 @@
 						</li>
 					</ul>
 					
-					<ul class="header__menu__inner header__menu__inner--mobile">
+					<ul id="mobile-menu" class="header__menu__inner header__menu__inner--mobile">
 						<li>
 							<a href="./about-me.html">About me</a>
 						</li>
@@ -42,6 +43,9 @@
 							<a href="./contact.html">Contact</a>
 						</li>
 					</ul>
+					<div class="nav-toggle" onclick="toggleMenu()">
+						<img src="./assets/svg/menu.svg" alt="Toggle menu"/>
+					</div>
 				</nav>
 			</header>
 
